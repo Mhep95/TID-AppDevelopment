@@ -1,1 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+  integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+  crossorigin="anonymous"
+  />
+  <style>
+    body {
+      font-family: 'Ubuntu', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      max-width: 375px; /* Set maximum width for iPhone screen */
+      margin: 0 auto; /* Center-align the content */
+      background-color: #f2f2f2; /* Set the background color for the posts */
+    }
 
+    header {
+      display: flex;
+      justify-content: center; /* Center-align the content */
+      align-items: center;
+      padding: 10px;
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
+      position: fixed;
+      top: 0;
+      left: 20px;
+      right: 20px;
+      z-index: 1000;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      max-width: 375px; /* Set maximum width for iPhone screen */
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .logo img {
+      width: 100px; /* Adjust as needed */
+    }
+
+    .notification-icon {
+      position: relative;
+    }
+
+    .notification-icon span {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background-color: red;
+      color: white;
+      border-radius: 50%;
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+
+    .notification-icon img {
+      width: 30px; /* Adjust as needed */
+    }
+
+    main {
+      padding: 140px 20px 80px; /* Adjust top and bottom padding */
+      margin-top: 60px; /* Space between header and posts */
+    }
+
+    .post {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 20px; /* Spacing between posts */
+      background-color: #fff;
+    }
+
+    .post img {
+      max-width: 100%; /* Limit image width to fit the screen */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 10px;
+    }
+
+    .post .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .profile img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .profile .name {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .profile .flag-icon {
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+    }
+
+    .post .tags {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .post .tags .tag {
+      padding: 5px 10px;
+      border-radius: 20px;
+      margin: 5px 5px 0 0;
+      font-size: 14px;
+      color: #000; /* Black text color */
+      display: flex; /* Align text and dot */
+      align-items: center;
+    }
+
+    .post .tags .tag::before {
+      content: '•'; /* Unicode for bullet (•) */
+      margin-right: 5px;
+    }
+
+    .post .tags .tag:nth-child(even) {
+      background-color: #add8ce; /* Alternate tag color */
+      color: #daf1eg; /* Alternate tag text color */
+    }
+
+    footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      padding: 10px;
+      border-top: 1px solid #ccc;
+      position: fixed;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+      z-index: 1000;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      max-width: 375px; /* Set maximum width for iPhone screen */
+    }
+
+    .footer-icons {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%; /* Make icons cover the width */
+    }
+
+    .footer-icons img {
+      width: 30px; /* Adjust as needed */
+    }
+  </style>
+  <title>Locals</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="Icons/Logo.svg" alt="Logo">
+    </div>
+    <div class="notification-icon">
+      <span>3</span> <!-- Display the notification count -->
+      <img src="Icons/Group 30NotificationBell.svg" alt="Notification Icon">
+    </div>
+  </header>
+
+  <main>
+    <!-- Post 1 -->
+    <div class="post">
+      <div class="profile">
+        <img src="ProfilePictures/Ellipse 1LouisPicture.svg" alt="Profile Image">
+        <div class="name">John Doe <img src="https://image-url-for-flag1.png" alt="Flag Icon" class="flag-icon"></div>
+      </div>
+      <img src="HomepagePosts/Milano.jpg" alt="Post 1 Image">
+      <div class="tags">
+        <div class="tag">Tag1</div>
+        <div class="tag">Tag2</div>
+        <div class="tag">Tag3</div>
+      </div>
+    </div>
+
+    <!-- Post 2 -->
+    <div class="post">
+      <div class="profile">
+        <img src="ProfilePictures/Ellipse 1OguzPicture.png" alt="Profile Image">
+        <div class="name">Jane Smith <img src="https://image-url-for-flag2.png" alt="Flag Icon" class="flag-icon"></div>
+      </div>
+      <img src="HomepagePosts/Istanbul.jpg" alt="Post 2 Image">
+      <div class="tags">
+        <div class="tag">Tag4</div>
+        <div class="tag">Tag5</div>
+      </div>
+    </div>
+
+    <!-- Post 3 -->
+    <div class="post">
+      <div class="profile">
+        <img src="ProfilePictures/Ellipse 1LisaPicture.png" alt="Profile Image">
+        <div class="name">Mike Johnson <img src="https://image-url-for-flag3.png" alt="Flag Icon" class="flag-icon"></div>
+      </div>
+      <img src="HomepagePosts/Norway.jpg" alt="Post 3 Image">
+      <div class="tags">
+        <div class="tag">Tag6</div>
+        <div class="tag">Tag7</div>
+        <div class="tag">Tag8</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-icons">
+      <img src="Icons/FrameHomeIcon.svg" alt="Home Icon">
+      <img src="Icons/FrameCreatePost.svg" alt="Create Post Icon">
+      <img src="Icons/FrameSearchIcon.svg" alt="Search Icon">
+      <img src="Icons/Frame 17ProfileIcon.svg" alt="Profile Image">
+    </div>
+  </footer>
+</body>
+</html>
