@@ -5,165 +5,182 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-  integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-  crossorigin="anonymous"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" />
   <style>
+    /* CSS for Locals website */
+
+    /* Body styling */
     body {
-      font-family: 'Ubuntu', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      max-width: 375px; /* Set maximum width for iPhone screen */
-      margin: 0 auto; /* Center-align the content */
-      background-color: #f2f2f2; /* Set the background color for the posts */
+        font-family: 'Ubuntu', Arial, sans-serif; /* Use Ubuntu font if available, or fallback to Arial or sans-serif */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        background-color: #f2f2f2; /* Set the background color for the posts */
+        margin-bottom: 50px; /* Add margin at the bottom to make space for footer */
     }
 
+    /* Header styling */
     header {
-      display: flex;
-      justify-content: center; /* Center-align the content */
-      align-items: center;
-      padding: 10px;
-      background-color: #fff;
-      border-bottom: 1px solid #ccc;
-      position: fixed;
-      top: 0;
-      left: 20px;
-      right: 20px;
-      z-index: 1000;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      max-width: 375px; /* Set maximum width for iPhone screen */
+        display: flex;
+        justify-content: center; /* Center-align the content */
+        align-items: center;
+        padding: 10px;
+        background-color: #fff; /* White background */
+        border-bottom: 1px solid #ccc; /* Bottom border with light gray color */
+        position: fixed; /* Fixed position at the top */
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000; /* Ensure it's on top of other elements */
+        border-bottom-left-radius: 10px; /* Rounded border bottom left */
+        border-bottom-right-radius: 10px; /* Rounded border bottom right */
     }
 
+    /* Logo styling */
     .logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     }
 
     .logo img {
-      width: 100px; /* Adjust as needed */
+    width: 100px; /* Adjust logo width */
     }
 
+    /* Notification icon styling */
     .notification-icon {
-      position: relative;
+    position: relative;
     }
 
     .notification-icon span {
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      background-color: red;
-      color: white;
-      border-radius: 50%;
-      padding: 4px 8px;
-      font-size: 12px;
+    position: absolute;
+    top: -7.5px;
+    right: -7.5px;
+    background-color: red; /* Red background for notification count */
+    color: white; /* White text color for notification count */
+    border-radius: 50%; /* Circular shape */
+    padding: 3px 6px;
+    font-size: 12px; /* Font size for notification count */
     }
 
     .notification-icon img {
-      width: 30px; /* Adjust as needed */
+    width: 30px; /* Adjust notification icon width */
     }
 
+    /* Main content styling */
     main {
-      padding: 140px 20px 80px; /* Adjust top and bottom padding */
-      margin-top: 60px; /* Space between header and posts */
+    padding-top: 60px; /* Adjusted top padding to accommodate the fixed header */
     }
 
+    /* Post styling */
     .post {
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 10px;
-      margin-bottom: 20px; /* Spacing between posts */
-      background-color: #fff;
+    padding: 10px;
+    margin: 10px 20px; /* Adjusted margin for posts */
+    position: relative; /* Relative position to position elements inside */
     }
 
+    /* Post image styling */
     .post img {
-      max-width: 100%; /* Limit image width to fit the screen */
-      height: auto; /* Maintain aspect ratio */
-      border-radius: 10px;
+    max-width: 100%; /* Ensure images don't exceed their container */
+    max-height: 100%; /* Ensure images don't exceed their container */
+    object-fit: cover; /* Maintain image aspect ratio and cover the container */
     }
 
+    /* Flag icon styling */
+    .flag-icon {
+    position: relative; /* Relative position for flag icon */
+    bottom: 40px; /* Adjust vertical position */
+    left: 0px; /* Adjust horizontal position */
+    font-size: 25px; /* Font size of flag icon */
+    padding: 5px; /* Padding for flag icon */
+    }
+
+    /* Profile section styling */
     .post .profile {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Adjust margin */
     }
 
     .profile img {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      margin-right: 10px;
+    width: 20px; /* Adjust profile image width */
+    height: 20px; /* Adjust profile image height */
+    border-radius: 50%; /* Circular profile image */
+    margin-right: 5px; /* Adjust margin */
     }
 
     .profile .name {
-      font-weight: bold;
-      display: flex;
-      align-items: center;
+    font-weight: bold; /* Bold font for profile name */
+    display: flex;
+    align-items: center;
     }
 
     .profile .flag-icon {
-      width: 20px;
-      height: 20px;
-      margin-left: 5px;
+    margin-left: 5px; /* Adjust margin */
+    font-size: 20px; /* Adjust font size */
     }
 
+    /* Tags styling */
     .post .tags {
-      display: flex;
-      flex-wrap: wrap;
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping of tags */
+    overflow-x: auto; /* Enable horizontal scrolling for tags */
+    margin-top: -30px; /* Adjust margin for tags */
     }
 
     .post .tags .tag {
-      padding: 5px 10px;
-      border-radius: 20px;
-      margin: 5px 5px 0 0;
-      font-size: 14px;
-      color: #000; /* Black text color */
-      display: flex; /* Align text and dot */
-      align-items: center;
+    padding: 5px 10px; /* Adjust padding */
+    border-radius: 20px; /* Rounded corners for tags */
+    margin: 0px 5px 5px 0; /* Adjust margins */
+    font-size: 16px; /* Adjust font size */
+    color: #000; /* Black text color */
+    display: flex; /* Align text and dot */
+    align-items: center;
+    background-color: rgb(218, 241, 236); /* Tag color in rgb */
+    white-space: nowrap; /* Prevent tag text from wrapping */
     }
 
     .post .tags .tag::before {
-      content: '•'; /* Unicode for bullet (•) */
-      margin-right: 5px;
+    content: '•'; /* Unicode for bullet (•) */
+    margin-right: 5px; /* Adjust margin */
+    font-size: 20px; /* Adjust bullet size */
     }
 
     .post .tags .tag:nth-child(even) {
-      background-color: #add8ce; /* Alternate tag color */
-      color: #daf1eg; /* Alternate tag text color */
+    background-color: #add8ce; /* Alternate tag color */
+    color: #daf1eg; /* Alternate tag text color */
     }
 
+    /* Footer styling */
     footer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #fff;
-      padding: 10px;
-      border-top: 1px solid #ccc;
-      position: fixed;
-      bottom: 0;
-      left: 20px;
-      right: 20px;
-      z-index: 1000;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      max-width: 375px; /* Set maximum width for iPhone screen */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff; /* White background */
+        padding: 10px; /* Padding for footer */
+        border-top: 1px solid #ccc; /* Top border with light gray color */
+        position: fixed; /* Fixed position at the bottom */
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000; /* Ensure it's on top of other elements */
+        border-top-left-radius: 10px; /* Rounded border top left */
+        border-top-right-radius: 10px; /* Rounded border top right */
+        margin-top: 10px; /* Add margin at the top to make space for header */
     }
 
+    /* Footer icons styling */
     .footer-icons {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      width: 100%; /* Make icons cover the width */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; /* Make icons cover the width */
     }
 
     .footer-icons img {
-      width: 30px; /* Adjust as needed */
+    width: 30px; /* Adjust icon width */
     }
+
   </style>
   <title>Locals</title>
 </head>
@@ -183,13 +200,16 @@
     <div class="post">
       <div class="profile">
         <img src="ProfilePictures/Ellipse 1LouisPicture.svg" alt="Profile Image">
-        <div class="name">John Doe <img src="https://image-url-for-flag1.png" alt="Flag Icon" class="flag-icon"></div>
+        <div class="name">Louis 🇬🇧</div>
       </div>
       <img src="HomepagePosts/Milano.jpg" alt="Post 1 Image">
+      <div class="flag-icon">🇮🇹</div> <!-- Add the flag icon for the country -->
       <div class="tags">
-        <div class="tag">Tag1</div>
-        <div class="tag">Tag2</div>
-        <div class="tag">Tag3</div>
+        <div class="tag">Milan</div>
+        <div class="tag">Sightseeing</div>
+        <div class="tag">Food and Drinks</div>
+        <div class="tag">Citytrip</div>
+        <div class="tag">Italy</div>
       </div>
     </div>
 
@@ -197,12 +217,15 @@
     <div class="post">
       <div class="profile">
         <img src="ProfilePictures/Ellipse 1OguzPicture.png" alt="Profile Image">
-        <div class="name">Jane Smith <img src="https://image-url-for-flag2.png" alt="Flag Icon" class="flag-icon"></div>
+        <div class="name">Oguz 🇹🇷</div>
       </div>
       <img src="HomepagePosts/Istanbul.jpg" alt="Post 2 Image">
+      <div class="flag-icon">🇹🇷</div> <!-- Add the flag icon for the country -->
       <div class="tags">
-        <div class="tag">Tag4</div>
-        <div class="tag">Tag5</div>
+        <div class="tag">Turkey</div>
+        <div class="tag">Istanbul</div>
+        <div class="tag">Food and Drinks</div>
+        <div class="tag">Café</div>
       </div>
     </div>
 
@@ -210,13 +233,15 @@
     <div class="post">
       <div class="profile">
         <img src="ProfilePictures/Ellipse 1LisaPicture.png" alt="Profile Image">
-        <div class="name">Mike Johnson <img src="https://image-url-for-flag3.png" alt="Flag Icon" class="flag-icon"></div>
+        <div class="name">Lisa 🇳🇴</div>
       </div>
       <img src="HomepagePosts/Norway.jpg" alt="Post 3 Image">
+      <div class="flag-icon">🇳🇴</div> <!-- Add the flag icon for the country -->
       <div class="tags">
-        <div class="tag">Tag6</div>
-        <div class="tag">Tag7</div>
-        <div class="tag">Tag8</div>
+        <div class="tag">Norway</div>
+        <div class="tag">Hiking</div>
+        <div class="tag">Outdoors</div>
+        <div class="tag">Nature</div>
       </div>
     </div>
   </main>
