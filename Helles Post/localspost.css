@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 45px;
   font-family: 'Ubuntu', sans-serif;
   min-height: 100vh;
   min-width: 100vw; /* Ensure the body takes at least the viewport height */
@@ -103,9 +103,10 @@ footer {
   align-items: flex-start;
   background-color: #fff; /* Set the background color to white */
   color: #424B5A; /* Set the icon color to #424B5A */
-  padding: 10px 0;
+  padding-bottom: 13px;
+  padding-top: 8px;
   position: fixed;
-  bottom: 10px;
+  bottom: 0px;
   width: 100%;
 }
 
