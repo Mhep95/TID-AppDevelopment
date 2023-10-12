@@ -126,13 +126,8 @@ footer {
 
 .top-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  border-radius: 10px; /* Rounded corners for boxes */
-  position: absolute; /* Position the box absolutely */
-  top: 35px; /* Adjust the top position as needed */
-  left: 15px; /* Adjust the left position for the top-left corner */
-  right: 15px; /* Adjust the right position for the top-right corner */
 }
 
 .icon-container {
@@ -140,10 +135,13 @@ footer {
   border-radius: 9px; /* Rounded corners for the chevron button */
   padding: 5px;
   display: flex;
+  position: fixed;
   align-items: center;
   justify-content: center; /* Center horizontally */
   height: 17px; /* Set the height */
   width: 17px; /* Set the width to make it quadratic */
+  top: 35px; /* Set the top position as needed */
+  left: 15px;
 }
 
 .icon j {
@@ -157,9 +155,13 @@ footer {
   background-color: rgba(255, 255, 255, 0.75); /* Semi-transparent background for boxes */
   border-radius: 10px; /* Rounded corners for boxes */
   display: flex;
+  position: absolute;
   align-items: center;
   padding: 5px;
   height: 17px; /* Set the height */
+  justify-content: center;
+  top: 35px; /* Set the top position as needed */
+  right: 15px;
 }
 
 .box p {
